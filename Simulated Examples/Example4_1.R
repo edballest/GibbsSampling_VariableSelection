@@ -11,4 +11,4 @@ names(data) <- X_vars
 data['y'] <- mapply(FUN = function(a,b) a+1.2*b+rnorm(1,mean = 0, sd = 2.5),data[,'X4'],data[,'X5'])
 
 #use custom function
-gibbsSamplingVarSelection(data,m = 100,p_i = 1/2,tau = 1/3,c_i = 10,R = diag(rep(1,6)),u_gamma = 0,lambda_gamma = 1)
+gibbsSamplingVarSelection(data,m = 1000,p_i = 1/2,tau = .33,c_i = 10,R = diag(rep(1,6)),u_gamma = 0,lambda_gamma = 1)
